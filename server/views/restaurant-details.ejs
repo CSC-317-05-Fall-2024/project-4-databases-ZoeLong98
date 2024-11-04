@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Travel Guide</title>
+    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="/restaurant-details-styles.css" />
+    <link rel="icon" type="image/png" href="images/icon.svg" />
+  </head>
+
+  <body style="min-height: 100vh">
+    <header></header>
+    <nav></nav>
+    <div class="restaurant-details">
+      <img class="restaurant-details-img" src="/<%= restaurant.photo %>" />
+      <div>
+        <h1><%= restaurant.name %></h1>
+        <h2><%= restaurant.address %></h2>
+        <h2><%= restaurant.phone %></h2>
+      </div>
+    </div>
+    <h2>Reviews</h2>
+    <div class="reviews">
+      <% if (reviews.length > 0) { %> <% reviews.forEach(review => { %>
+      <div class="review">
+        <p>Rating: <%= review.rating %>/5</p>
+        <p>Content: <%= review.content %></p>
+      </div>
+      <% }) %> <% } else { %>
+      <p>No reviews yet.</p>
+      <% } %>
+    </div>
+
+    <footer></footer>
+    <script type="module" src="/scripts/header.js"></script>
+  </body>
+</html>

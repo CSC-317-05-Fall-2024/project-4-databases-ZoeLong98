@@ -1,0 +1,25 @@
+.restaurant-details {
+  margin: 30px 50px 30px 30px;
+  display: flex;
+}
+
+.restaurant-details-img {
+  width: 300px;
+  margin-right: 30px;
+}
+
+.reviews {
+  max-height: 400px; /* 设置最大高度 */
+  overflow-y: auto; /* 当内容超出时显示垂直滚动条 */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  width: 80%;
+}
+.review {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}

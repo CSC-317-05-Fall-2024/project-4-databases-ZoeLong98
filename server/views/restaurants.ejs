@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Shanghai</title>
+    <link rel="icon" href="images/Shanghai-580x386.jpg" />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body style="min-height: 100vh">
+    <header></header>
+    <nav></nav>
+    <div
+      style="
+        width: 100vw;
+        text-align: left;
+        margin-top: -10px;
+        padding-left: 20px;
+      "
+    >
+      Click restaurant name to get detail information
+    </div>
+    <div class="restaurants">
+      <% for (let i = 0; i < restaurantData.length; i++) { %>
+      <div class="restaurantInfo">
+        <div class="RImage">
+          <img src="<%= restaurantData[i].photo %>" alt="" />
+        </div>
+        <div>
+          <a
+            href="/restaurants/<%= restaurantData[i].id %>"
+            class="restaurantName"
+            ><p><%= restaurantData[i].name %></p></a
+          >
+
+          <p><%= restaurantData[i].address %></p>
+          <p><%= restaurantData[i].phone %></p>
+        </div>
+        <button id="delete-<%= restaurantData[i].id  %>" class="delete">
+          X
+        </button>
+      </div>
+      <% } %>
+    </div>
+  </body>
+  <footer></footer>
+  <script type="module" src="scripts/header.js"></script>
+  <script type="module" src="scripts/restaurantCards.js"></script>
+</html>
